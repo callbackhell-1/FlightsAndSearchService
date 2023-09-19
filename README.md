@@ -8,10 +8,10 @@
     - middlewares/
     - services/
     - config/
-    - /
+    - utils/ 
     - repository/
 
   - tests/[later]
   - static/
   - temp/
-
+  
