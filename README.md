@@ -45,6 +45,10 @@
 
 `npx sequelize model:generate --name City --attributes name:String`
 
+## Migrate to DB :
+
+`npx sequelize db:migrate`
+
 ### Folder Structure :
 
 - src/
