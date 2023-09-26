@@ -22,19 +22,42 @@
 
 - Once you've added your db config as listed above, go to the src folder from your terminal and execute npx sequelize db:create and then execute
 
+## DB Design
+
+- Airplane Table
+- Flight
+- Airport
+- City
+
+- A flight belongs to an airplane but one airplane can be used in multiple flights
+- A city has many airports but one airport belongs to a city
+- One airport can have many flights, but a flight belongs to one airport
+
+## Tables
+
+### City -> id, name, created_at, updated_at
+
+### Airport -> id, name, address, city_id, created_at, updated_at
+
+     - Relationship -> City has many airports and Airport belongs to a city (one to many)
+
+## Create Model using Sequelize:
+
+`npx sequelize model:generate --name City --attributes name:String`
+
 ### Folder Structure :
 
-  - src/
+- src/
 
-    - index.js (server file)
-    - controllers/
-    - models/
-    - middlewares/
-    - services/
-    - config/
-    - utils/
-    - repository/
+  - index.js (server file)
+  - controllers/
+  - models/
+  - middlewares/
+  - services/
+  - config/
+  - utils/
+  - repository/
 
-  - tests/[later]
-  - static/
-  - temp/
+- tests/[later]
+- static/
+- temp/
