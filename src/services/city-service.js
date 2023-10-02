@@ -2,7 +2,7 @@ const { CityRepositoy } = require("../repository/index");
 
 class CityService {
   constructor() {
-    this.CityRepositoy = new CityRepositoy(); //calling CityRepositoy func. & create new obj of cityRepository
+    this.CityRepositoy = new CityRepositoy();
   }
 
   async createCity(data) {
@@ -45,3 +45,10 @@ class CityService {
     }
   }
 }
+
+/**
+ * Problem with this code:
+ * Everytime if we create new CityService object, a new CityRepository object is created.
+ * But there is no point of creating CityRepository object, because , the object don't have any property, it only have some behaviour
+ * How to reolve this?
+ */
