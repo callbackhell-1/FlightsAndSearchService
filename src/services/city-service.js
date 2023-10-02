@@ -46,9 +46,4 @@ class CityService {
   }
 }
 
-/**
- * Problem with this code:
- * Everytime if we create new CityService object, a new CityRepository object is created.
- * But there is no point of creating CityRepository object, because , the object don't have any property, it only have some behaviour
- * How to reolve this?
- */
+
