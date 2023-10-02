@@ -2,7 +2,7 @@ const { CityRepositoy } = require("../repository/index");
 
 class CityService {
   constructor() {
-    this.CityRepositoy = new CityRepositoy(); //calling CityRepositoy func. & create new obj
+    this.CityRepositoy = new CityRepositoy(); //calling CityRepositoy func. & create new obj of cityRepository
   }
 
   async createCity(data) {
