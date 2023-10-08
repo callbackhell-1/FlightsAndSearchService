@@ -42,8 +42,12 @@
      - Relationship -> City has many airports and Airport belongs to a city (one to many)
 
 ## Create Model using Sequelize:
+* Inside src directory
 
-`npx sequelize model:generate --name City --attributes name:String`
+1. City : `npx sequelize model:generate --name City --attributes name:String`
+
+2. Airport : `npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer`
+
 
 ## Migrate to DB :
 
@@ -70,6 +74,5 @@
   `localhost:3000/api/v1/city`
 
 ### To get filterd city
-
-    Pass the query param
   `localhost:3000/api/v1/city?name=p`
+
