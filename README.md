@@ -65,3 +65,11 @@
 - tests/[later]
 - static/
 - temp/
+
+### To get all the cities :
+  `localhost:3000/api/v1/city`
+
+### To get filterd city
+
+    Pass the query param
+  `localhost:3000/api/v1/city?name=p`
