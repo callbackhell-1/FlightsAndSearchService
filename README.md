@@ -39,7 +39,7 @@
 
 ### Airport -> id, name, address, city_id, created_at, updated_at
 
-     - Relationship -> City has many airports and Airport belongs to a city (one to many)
+     - Relationship -> City has many airports.  and Airport belongs to a city (one to many)
 
 ## Create Model using Sequelize:
 * Inside src directory
@@ -76,3 +76,11 @@
 ### To get filterd city
   `localhost:3000/api/v1/city?name=p`
 
+## Association Steps:
+-- created a model airport with 2 parameter address,ityId
+-- We got a new model file and a migration file
+-- In Airport model file we set airport belong to a city.
+-- In city model we did, city hasMany airport, and mentioned the Foreign Key, and add CASCADE also. 
+-- Also made changes in migration files.
+--  and we did `npx sequelize db:migrate`
+-- we have table in DB
