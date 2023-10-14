@@ -84,3 +84,10 @@
 -- Also made changes in migration files.
 --  and we did `npx sequelize db:migrate`
 -- we have table in DB
+
+## For creating Seeders :
+`npx sequelize seed:generate --name add-airports`
+
+-- once we make relevent changes in seed files.
+-- we need to seed them
+`npx sequelize db:seed:all`
