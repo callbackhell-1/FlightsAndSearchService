@@ -77,7 +77,7 @@
   `localhost:3000/api/v1/city?name=p`
 
 ## Association Steps:
--- created a model airport with 2 parameter address,ityId
+-- created a model airport with 2 parameter address,CityId
 -- We got a new model file and a migration file
 -- In Airport model file we set airport belong to a city.
 -- In city model we did, city hasMany airport, and mentioned the Foreign Key, and add CASCADE also. 
