@@ -4,6 +4,8 @@ const ApiRoutes = require("./routes/index");
 
 const { PORT } = require("./config/serverConfig");
 
+const db = require("./models/index");
+
 const setupAndStartServer = async () => {
   const app = express();
 
@@ -17,6 +19,7 @@ const setupAndStartServer = async () => {
       console.log(`Error : ${err}`);
     }
     console.log(`Server is up & running on ${PORT}`);
+    db.sequelize.sync({alter : true});
   });
 };
 

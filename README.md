@@ -91,3 +91,9 @@
 -- once we make relevent changes in seed files.
 -- we need to seed them
 `npx sequelize db:seed:all`
+
+
+### db/Model Synchronization:
+
+- Table level sync.
+- Db level sysnc
