@@ -14,12 +14,14 @@ const setupAndStartServer = async () => {
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use("/api", ApiRoutes);
 
-  app.listen(PORT, (err) => {
+  app.listen(PORT, async (err) => {
     if (err) {
       console.log(`Error : ${err}`);
     }
     console.log(`Server is up & running on ${PORT}`);
-    db.sequelize.sync({alter : true});
+    if (process.env.SYNC_DB) {
+      db.sequelize.sync({ alter: true });
+    }
   });
 };
 

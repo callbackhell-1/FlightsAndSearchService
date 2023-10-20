@@ -42,12 +42,12 @@
      - Relationship -> City has many airports.  and Airport belongs to a city (one to many)
 
 ## Create Model using Sequelize:
-* Inside src directory
+
+- Inside src directory
 
 1. City : `npx sequelize model:generate --name City --attributes name:String`
 
 2. Airport : `npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer`
-
 
 ## Migrate to DB :
 
@@ -71,29 +71,36 @@
 - temp/
 
 ### To get all the cities :
-  `localhost:3000/api/v1/city`
+
+`localhost:3000/api/v1/city`
 
 ### To get filterd city
-  `localhost:3000/api/v1/city?name=p`
+
+`localhost:3000/api/v1/city?name=p`
 
 ## Association Steps:
+
 -- created a model airport with 2 parameter address,CityId
 -- We got a new model file and a migration file
 -- In Airport model file we set airport belong to a city.
--- In city model we did, city hasMany airport, and mentioned the Foreign Key, and add CASCADE also. 
+-- In city model we did, city hasMany airport, and mentioned the Foreign Key, and add CASCADE also.
 -- Also made changes in migration files.
---  and we did `npx sequelize db:migrate`
+-- and we did `npx sequelize db:migrate`
 -- we have table in DB
 
 ## For creating Seeders :
+
 `npx sequelize seed:generate --name add-airports`
 
 -- once we make relevent changes in seed files.
 -- we need to seed them
 `npx sequelize db:seed:all`
 
-
 ### db/Model Synchronization:
 
 - Table level sync.
 - Db level sysnc
+
+db.sequelize.sync({alter : true}); -> Db sync everytime when we restart our server, so to avoid that we made changes in .env file if its true then only is sync it.
+
+- Medium Article : https://medium.com/@tavilesa12/dealing-with-many-to-many-associations-in-sequelize-bddc34201b80
