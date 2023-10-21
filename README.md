@@ -108,4 +108,8 @@ db.sequelize.sync({alter : true}); -> Db sync everytime when we restart our serv
 
 ----------------------------------------
 # Airplane :
-`npx sequelize model:generate --name Airplane --attributes modelNumber:String,capacity:integer`
+### STEPS:
+
+1. `npx sequelize model:generate --name Airplane --attributes modelNumber:String,capacity:integer`
+2. added constraint in model & migration file.
+3. `npx sequelize db:migrate`
