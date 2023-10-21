@@ -127,4 +127,8 @@ official sequelize docs for migration :
 https://sequelize.org/docs/v6/other-topics/migrations
 https://github.com/sequelize/cli
 
+---
+## Flights
+### STEPS:
 
+1. `npx sequelize model:generate --name Flights --attributes flightNumber:String,airplaneId:integer,departureAirportId:integer,arrivalAirportId:integer,arrivalTime:Date,departureTime:Date,price:integer,boardingGate:String,totalSeats:integer`
