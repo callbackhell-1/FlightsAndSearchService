@@ -104,3 +104,8 @@
 db.sequelize.sync({alter : true}); -> Db sync everytime when we restart our server, so to avoid that we made changes in .env file if its true then only is sync it.
 
 - Medium Article : https://medium.com/@tavilesa12/dealing-with-many-to-many-associations-in-sequelize-bddc34201b80
+
+
+----------------------------------------
+# Airplane :
+`npx sequelize model:generate --name Airplane --attributes modelNumber:String,capacity:integer`
