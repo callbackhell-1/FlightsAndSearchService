@@ -113,3 +113,6 @@ db.sequelize.sync({alter : true}); -> Db sync everytime when we restart our serv
 1. `npx sequelize model:generate --name Airplane --attributes modelNumber:String,capacity:integer`
 2. added constraint in model & migration file.
 3. `npx sequelize db:migrate`
+-> After migration it will start reflecting in mysql DB.
+-  Now we create the seed file
+`npx sequelize seed:generate --name add-airplanes`
