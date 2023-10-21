@@ -1,10 +1,13 @@
 const { AirplaneRepository, FlightRepository } = require("../repository/index");
 
 class FlightService {
+  constructor() {
+    this.airplaneRepository = new AirplaneRepository();
+  }
+
   async createFlight(data) {
     try {
-      const airplaneRepository = new AirplaneRepository();
-      const airplane = await airplaneRepository.getAirplane(data.airplaneId);
+      const airplane = await this.airplaneRepository.getAirplane(data.airplaneId);
       return airplane;
     } catch (error) {
       console.log("Something went wrong in service layer");
@@ -12,16 +15,6 @@ class FlightService {
     }
   }
 }
-
-/**
- * For createFlight(data) : 
- * const airplaneRepository = new AirplaneRepository();
- * Above line create new object of AirplaneRepository,
- * Now when we have to getFlightData():
- * Again we need to create the new object of  AirplaneRepository.
- * So to avoid the creating new object again & again we  create the constructor
-at that time ony when we created the FlightService .
-*/
 
 /** Data we get:
  * {
