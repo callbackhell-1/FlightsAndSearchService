@@ -122,18 +122,21 @@ db.sequelize.sync({alter : true}); -> Db sync everytime when we restart our serv
   -- we need to seed them
   `npx sequelize db:seed:all`
   -- After Seeding all we get all the changes that we made in seeder file in our DB.
-  
+
 official sequelize docs for migration :
 https://sequelize.org/docs/v6/other-topics/migrations
 https://github.com/sequelize/cli
 
 ---
+
 ## Flights
+
 ### STEPS:
 
 1. `npx sequelize model:generate --name Flights --attributes flightNumber:String,airplaneId:integer,departureAirportId:integer,arrivalAirportId:integer,arrivalTime:Date,departureTime:Date,price:integer,boardingGate:String,totalSeats:integer`
 2. After model creation, added the constraints.
-3. Migrate it ``npx sequelize db:migrate``
+3. Migrate it `npx sequelize db:migrate`
 4. Setup flight repository.
 5. create Airplane repository.
 6. Setup flight sevices
+7. Setup flight controller
