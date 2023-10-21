@@ -135,3 +135,4 @@ https://github.com/sequelize/cli
 2. After model creation, added the constraints.
 3. Migrate it ``npx sequelize db:migrate``
 4. Setup flight repository.
+5. create Airplane repository.
