@@ -19,8 +19,9 @@ class FlightService {
  * Above line create new object of AirplaneRepository,
  * Now when we have to getFlightData():
  * Again we need to create the new object of  AirplaneRepository.
- * So to avoid the creating new object again & again we will create the constructor
- */
+ * So to avoid the creating new object again & again we  create the constructor
+at that time ony when we created the FlightService .
+*/
 
 /** Data we get:
  * {
