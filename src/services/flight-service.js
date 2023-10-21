@@ -3,7 +3,7 @@ const { AirplaneRepository, FlightRepository } = require("../repository/index");
 class FlightService {
   constructor() {
     this.airplaneRepository = new AirplaneRepository();
-    this.flightRepository = new FlightRepository();
+    this.flightrepository = new FlightRepository();
   }
 
   async createFlight(data) {
@@ -12,7 +12,7 @@ class FlightService {
         data.airplaneId
       );
       //   First we fetch the airplane & then add the capacity to flight
-      const flight = await this.flightRepository.createFlight({
+      const flight = await this.flightrepository.createFlight({
         ...data,
         totalSeats: airplane.capacity,
       });
