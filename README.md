@@ -122,27 +122,9 @@ db.sequelize.sync({alter : true}); -> Db sync everytime when we restart our serv
   -- we need to seed them
   `npx sequelize db:seed:all`
   -- After Seeding all we get all the changes that we made in seeder file in our DB.
-  eg. :
- ` {
-  modelNumber: "Boeing 777",
-  capacity: 120,
-  createdAt: new Date(),
-  updatedAt: new Date(),
-  },`
-
-DB : 
-mysql> select * from airplanes;
-+----+-------------+----------+---------------------+---------------------+
-| id | modelNumber | capacity | createdAt           | updatedAt           |
-+----+-------------+----------+---------------------+---------------------+
-|  6 | Airbus A330 |      350 | 2023-10-21 10:45:01 | 2023-10-21 10:45:01 |
-|  7 | Boeing 737  |      300 | 2023-10-21 10:45:01 | 2023-10-21 10:45:01 |
-|  8 | Boeing 777  |      120 | 2023-10-21 10:45:01 | 2023-10-21 10:45:01 |
-|  9 | Airbus A320 |      250 | 2023-10-21 10:45:01 | 2023-10-21 10:45:01 |
-| 10 | Boeing 747  |     1000 | 2023-10-21 10:45:01 | 2023-10-21 10:45:01 |
-+----+-------------+----------+---------------------+---------------------+
-5 rows in set (0.00 sec)
-
-
+  
+official sequelize docs for migration :
+https://sequelize.org/docs/v6/other-topics/migrations
+https://github.com/sequelize/cli
 
 
