@@ -132,3 +132,6 @@ https://github.com/sequelize/cli
 ### STEPS:
 
 1. `npx sequelize model:generate --name Flights --attributes flightNumber:String,airplaneId:integer,departureAirportId:integer,arrivalAirportId:integer,arrivalTime:Date,departureTime:Date,price:integer,boardingGate:String,totalSeats:integer`
+2. After model creation, added the constraints.
+3. Migrate it ``npx sequelize db:migrate``
+4. Setup flight repository.
