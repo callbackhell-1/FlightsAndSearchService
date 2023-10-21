@@ -105,14 +105,44 @@ db.sequelize.sync({alter : true}); -> Db sync everytime when we restart our serv
 
 - Medium Article : https://medium.com/@tavilesa12/dealing-with-many-to-many-associations-in-sequelize-bddc34201b80
 
+---
 
-----------------------------------------
 # Airplane :
+
 ### STEPS:
 
 1. `npx sequelize model:generate --name Airplane --attributes modelNumber:String,capacity:integer`
 2. added constraint in model & migration file.
 3. `npx sequelize db:migrate`
--> After migration it will start reflecting in mysql DB.
--  Now we create the seed file
-`npx sequelize seed:generate --name add-airplanes`
+   -> After migration it will start reflecting in mysql DB.
+
+- Now we create the seed file
+  `npx sequelize seed:generate --name add-airplanes`
+  -- once we make relevent changes in seed files.
+  -- we need to seed them
+  `npx sequelize db:seed:all`
+  -- After Seeding all we get all the changes that we made in seeder file in our DB.
+  eg. :
+ ` {
+  modelNumber: "Boeing 777",
+  capacity: 120,
+  createdAt: new Date(),
+  updatedAt: new Date(),
+  },`
+
+DB : 
+mysql> select * from airplanes;
++----+-------------+----------+---------------------+---------------------+
+| id | modelNumber | capacity | createdAt           | updatedAt           |
++----+-------------+----------+---------------------+---------------------+
+|  6 | Airbus A330 |      350 | 2023-10-21 10:45:01 | 2023-10-21 10:45:01 |
+|  7 | Boeing 737  |      300 | 2023-10-21 10:45:01 | 2023-10-21 10:45:01 |
+|  8 | Boeing 777  |      120 | 2023-10-21 10:45:01 | 2023-10-21 10:45:01 |
+|  9 | Airbus A320 |      250 | 2023-10-21 10:45:01 | 2023-10-21 10:45:01 |
+| 10 | Boeing 747  |     1000 | 2023-10-21 10:45:01 | 2023-10-21 10:45:01 |
++----+-------------+----------+---------------------+---------------------+
+5 rows in set (0.00 sec)
+
+
+
+
