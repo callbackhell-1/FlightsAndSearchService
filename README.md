@@ -136,3 +136,4 @@ https://github.com/sequelize/cli
 3. Migrate it ``npx sequelize db:migrate``
 4. Setup flight repository.
 5. create Airplane repository.
+6. Setup flight sevices
